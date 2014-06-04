@@ -1,0 +1,3 @@
+@ECHO OFF
+DEL /F/S/Q . > NUL
+RMDIR /F/S . 2> NUL
