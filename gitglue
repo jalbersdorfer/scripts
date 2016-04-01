@@ -1,0 +1,17 @@
+#!/bin/bash
+
+INITIAL_DIR=${PWD}
+
+if [ -d .git ]
+then
+        "$@"
+else
+        for repo in $(find . -maxdepth ${GITGLUE_MAXDEPTH:=2} -type d -name ".git")
+        do
+                cd $repo/..
+                echo ${PWD}
+                "$@"
+                echo
+                cd $INITIAL_DIR
+        done
+fi
