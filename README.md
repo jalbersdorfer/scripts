@@ -7,3 +7,7 @@ wipe.bat
 --------
 To wipe-out all Files and Folders within the current directory the fastest way possible.
 wipe.bat runs without asking any Questions, without giving any response - It just wipes.
+
+pgitglue
+--------
+A parallel gitglue implementation.
